@@ -246,9 +246,9 @@ inline std::vector<RouteStep> assembleSteps(const datafacade::BaseDataFacade &fa
     BOOST_ASSERT(steps.back().intersections.front().bearings.size() == 1);
     BOOST_ASSERT(steps.back().intersections.front().entry.size() == 1);
     BOOST_ASSERT(steps.back().maneuver.waypoint_type == WaypointType::Arrive);
-    BOOST_ASSERT(steps.back().maneuver.lanes.lanes_in_turn == 0);
-    BOOST_ASSERT(steps.back().maneuver.lanes.first_lane_from_the_right == INVALID_LANEID);
-    BOOST_ASSERT(steps.back().maneuver.lane_description.empty());
+    BOOST_ASSERT(steps.back().intersections.front().lanes.lanes_in_turn == 0);
+    BOOST_ASSERT(steps.back().intersections.front().lanes.first_lane_from_the_right == INVALID_LANEID);
+    BOOST_ASSERT(steps.back().intersections.front().lane_description.empty());
     return steps;
 }
 
